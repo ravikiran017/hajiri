@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Management Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="sidebar">
+        <img src="path/Navbar.png" alt="Sidebar">
+    </nav>
+
+    <main class="content">
+        <header class="top-bar">
+            <div class="header-content">
+                <h1>Expense Management</h1>
+                <p>Manage Employee Expense Reimbursements</p>
+            </div>
+            <div class="user-info">
+                <span>📩 My Inbox</span>
+                <div class="profile">M</div>
+            </div>
+        </header>
+        <ul class="menu">
+            <li class="active">Dashboard</li>
+            <li>Expense Request</li>
+            <li>Company Expense Policy</li>
+            <li>Company Wallet</li>
+        </ul>
+        </div>
+        <div>
+            <!-- This wrapper ensures Date Range & Expense Summary stay in one line -->
+            <div class="dashboard-container">
+                <!-- Left Side -->
+                <div class="left-side">
+                    <div class="date-range-container">
+                        <span class="label">Date Range</span>
+                        <div class="date">
+                            <button class="prev-btn">←</button>
+                            <span class="date-value">January, 2025</span>
+                            <span class="calendar-icon">📅</span>
+                            <button class="next-btn">→</button>
+                        </div>
+                    </div>
+
+                    <div class="wallet-container">
+                        <h3 class="wallet-title">Wallet Details</h3>
+
+                        <!-- Wallet Balance Card -->
+                        <div class="wallet-card">
+                            <p class="wallet-subtitle">Company Wallet</p>
+                            <p class="wallet-balance-label">Your Balance</p>
+                            <h2 class="wallet-balance">₹16,05,894</h2>
+                            <div class="wallet-progress">
+                                <span>Spending Limit</span>
+                                <span class="spending-amount">₹10,05,894</span>
+                            </div>
+                        </div>
+
+                        <!-- Employee Transactions -->
+                        <h3 class="transactions-title">Employee Wallet Transactions</h3>
+                        <ul class="transactions-list">
+                            <li class="transaction">
+                                <img src="path/avatar1.png" alt="Avatar">
+                                <div class="transaction-info">
+                                    <p class="transaction-name">Eleanor Pena</p>
+                                    <p class="transaction-department">Department: Sales Department</p>
+                                </div>
+                                <p class="transaction-amount">₹10,894</p>
+                            </li>
+                            <li class="transaction">
+                                <img src="path/avatar1.png" alt="Avatar">
+                                <div class="transaction-info">
+                                    <p class="transaction-name">Eleanor Pena</p>
+                                    <p class="transaction-department">Department: IT Department</p>
+                                </div>
+                                <p class="transaction-amount">₹9,894</p>
+                            </li>
+                            <li class="transaction">
+                                <img src="path/avatar1.png" alt="Avatar">
+                                <div class="transaction-info">
+                                    <p class="transaction-name">Eleanor Pena</p>
+                                    <p class="transaction-department">Department: Relation Manager</p>
+                                </div>
+                                <p class="transaction-amount">₹8,894</p>
+                            </li>
+                            <li class="transaction">
+                                <img src="path/avatar1.png" alt="Avatar">
+                                <div class="transaction-info">
+                                    <p class="transaction-name">Eleanor Pena</p>
+                                    <p class="transaction-department">Department: Relation Manager</p>
+                                </div>
+                                <p class="transaction-amount">₹12,894</p>
+                            </li>
+                            <li class="transaction">
+                                <img src="path/avatar1.png" alt="Avatar">
+                                <div class="transaction-info">
+                                    <p class="transaction-name">Eleanor Pena</p>
+                                    <p class="transaction-department">Department: Relation Manager</p>
+                                </div>
+                                <p class="transaction-amount">₹11,894</p>
+                            </li>
+                            <li class="transaction">
+                                <img src="path/avatar1.png" alt="Avatar">
+                                <div class="transaction-info">
+                                    <p class="transaction-name">Eleanor Pena</p>
+                                    <p class="transaction-department">Department: Relation Manager</p>
+                                </div>
+                                <p class="transaction-amount">₹27,894</p>
+                            </li>
+                        </ul>
+
+                        <!-- Button -->
+                        <button class="see-transactions">See all Transactions</button>
+                    </div>
+                </div>
+
+                <!-- Right Side -->
+                <div class="right-side">
+                    <div class="expense-summary-container">
+                        <div class="expense-card">
+                            <span class="expense-label">Settled Expense</span>
+                            <h2 class="expense-value">₹1,24,420</h2>
+                            <p class="expense-change"> 1.3% Up from past week</p>
+                        </div>
+                        <div class="expense-card">
+                            <span class="expense-label">Un-Settled Expense</span>
+                            <h2 class="expense-value">₹80,240</h2>
+                            <p class="expense-change"> 4.3% Down from past week</p>
+                        </div>
+                        <div class="expense-card">
+                            <span class="expense-label">In Process</span>
+                            <h2 class="expense-value">₹34,240</h2>
+                            <p class="expense-requests">24 Requests this week</p>
+                        </div>
+                        <div class="expense-card">
+                            <span class="expense-label">Rejected Expense</span>
+                            <h2 class="expense-value">₹1,240</h2>
+                            <p class="expense-requests">12 Requests this week</p>
+                        </div>
+                        <div class="expense-card">
+                            <span class="expense-label">Client Expense</span>
+                            <h2 class="expense-value">₹14,240</h2>
+                            <p class="expense-change"> 1.3% Up from past week</p>
+                        </div>
+                    </div>
+                    <div class="right-side-content">
+                        <div class="categories-card">
+                            <div class="categories-header">
+                                <h3>Categories</h3>
+                                <div class="week-selector">Week 1 ▼</div>
+                            </div>
+
+                            <div class="expense-summary">
+                                <div class="expense-title">
+                                    <strong>10</strong> Types Of Expense
+                                    <p>Defined By Your Organisation</p>
+                                </div>
+                                <div class="progress-chart">%</div>
+                            </div>
+
+
+                            <ul class="expense-list">
+                                <li>
+                                    <span class="dot red"></span>
+                                    <span>Travel & Transportation (20%)</span>
+                                    <span class="amount">₹80,240</span>
+                                </li>
+                                <li>
+                                    <span class="dot blue"></span>
+                                    <span>Employee Reimbursements (18%)</span>
+                                    <span class="amount">₹23,240</span>
+                                </li>
+                                <li>
+                                    <span class="dot light-blue"></span>
+                                    <span>Office & Administration (11%)</span>
+                                    <span class="amount">₹13,240</span>
+                                </li>
+                                <li>
+                                    <span class="dot green"></span>
+                                    <span>Client Engagement & Entertainment (9%)</span>
+                                    <span class="amount">₹11,240</span>
+                                </li>
+                                <li>
+                                    <span class="dot cyan"></span>
+                                    <span>Training & Development (8%)</span>
+                                    <span class="amount">₹10,240</span>
+                                </li>
+                                <li>
+                                    <span class="dot dark-blue"></span>
+                                    <span>Professional Fees (10%)</span>
+                                    <span class="amount">₹20,240</span>
+                                </li>
+                                <li>
+                                    <span class="dot orange"></span>
+                                    <span>IT & Software (10%)</span>
+                                    <span class="amount">₹40,240</span>
+                                </li>
+                                <li>
+                                    <span class="dot purple"></span>
+                                    <span>Miscellaneous Expenses (6%)</span>
+                                    <span class="amount">₹50,240</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="client-report">
+                            <div class="report-header">
+                                <h3>Client Report</h3>
+                                <div class="week-selector">Week 1 ▼</div>
+                            </div>
+
+                            <div class="client-card">
+                                <div class="client-header">
+                                    <img src="path/mooi-logo.png" alt="Client Logo">
+                                    <div class="client-info">
+                                        <h4>Wekrata</h4>
+                                        <div class="progress-container">
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 50%;"></div>
+                                            </div>
+                                            <span class="percentage">50%</span>
+                                        </div>
+                                    </div>
+                                    <div class="amount">
+                                        <strong>₹54,240</strong>
+                                        <span>This week</span>
+                                    </div>
+                                </div>
+
+                                <div class="card-footer">
+                                    <p class="total-spent">Total money spent till now <strong>₹54,240</strong></p>
+                                    <div class="view-details">View Details ▼</div>
+                                </div>
+                            </div>
+                            <div class="client-card">
+                                <div class="client-header">
+                                    <img src="path/mooi-logo.png" alt="Client Logo">
+                                    <div class="client-info">
+                                        <h4>Wekrata</h4>
+                                        <div class="progress-container">
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 60%;"></div>
+                                            </div>
+                                            <span class="percentage">60%</span>
+                                        </div>
+                                    </div>
+                                    <div class="amount">
+                                        <strong>₹84,240</strong>
+                                        <span>This week</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <p class="total-spent">Total money spent till now <strong>₹54,240</strong></p>
+                                    <div class="view-details">View Details ▼</div>
+                                </div>
+                            </div>
+                            <div class="client-card">
+                                <div class="client-header">
+                                    <img src="path/mooi-logo.png" alt="Client Logo">
+                                    <div class="client-info">
+                                        <h4>Wekrata</h4>
+                                        <div class="progress-container">
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 30%;"></div>
+                                            </div>
+                                            <span class="percentage">30%</span>
+                                        </div>
+                                    </div>
+                                    <div class="amount">
+                                        <strong>₹94,240</strong>
+                                        <span>This week</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <p class="total-spent">Total money spent till now <strong>₹54,240</strong></p>
+                                    <div class="view-details">View Details ▼</div>
+                                </div>
+                            </div>
+
+                            <div class="client-card">
+                                <div class="client-header">
+                                    <img src="path/mooi-logo.png" alt="Client Logo">
+                                    <div class="client-info">
+                                        <h4>Wekrata</h4>
+                                        <div class="progress-container">
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 90%;"></div>
+                                            </div>
+                                            <span class="percentage">90%</span>
+                                        </div>
+                                    </div>
+                                    <div class="amount">
+                                        <strong>₹2,14,240</strong>
+                                        <span>This week</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <p class="total-spent">Total money spent till now <strong>₹54,240</strong></p>
+                                    <div class="view-details">View Details ▼</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Departmental Budget Allocation Section -->
+                    <div class="department-budget">
+                        <h3>Departmental Budget Allocation</h3>
+                        <div class="budget-list">
+                            <div class="budget-item">
+                                <strong>₹40,240</strong>
+                                <span>Sales & Marketing</span>
+                            </div>
+                            <div class="budget-item">
+                                <strong>₹80,240</strong>
+                                <span>Operations & Support</span>
+                            </div>
+                            <div class="budget-item">
+                                <strong>₹20,240</strong>
+                                <span>HR & Administration</span>
+                            </div>
+                            <div class="budget-item">
+                                <strong>₹1,23,240</strong>
+                                <span>Finance & Legal</span>
+                            </div>
+                            <div class="budget-item">
+                                <strong>₹20,240</strong>
+                                <span>IT & Engineering</span>
+                            </div>
+                            <div class="budget-item">
+                                <strong>₹20,240</strong>
+                                <span>Product Development</span>
+                            </div>
+                            <div class="budget-item">
+                                <strong>₹20,240</strong>
+                                <span>Creative & Strategy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

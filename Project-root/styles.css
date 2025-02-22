@@ -1,0 +1,695 @@
+/* General Reset */
+body,h1,h2,h3,p,ul,li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* Prevents sidebar from shrinking */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar img {
+    max-width: 100%;
+    height: 100vh;
+    display: block;
+}
+
+/* Main Content */
+.content {
+    flex-grow: 1; /* Takes remaining space */
+    padding: 0px 10px 0px 10px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Reduce sidebar width on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 150px; /* Adjust width */
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 120px;
+    }
+}
+
+@media (max-width: 400px) {
+    .sidebar {
+        width: 100px;
+    }
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:15px 20px 20px 20px;
+}
+
+/* Header Content */
+.header-content h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header-content p {
+    margin: 0;
+    font-size: 14px;
+    color: gray;
+}
+
+/* User Info */
+.user-info {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 15px;
+}
+
+/* Profile Circle */
+.profile {
+    width: 40px; /* Circle width */
+    height: 40px;/* Circle height */
+    border-radius: 50%;/* Makes it a circle */
+    background-color: #ff8400;/* Profile background color */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none; /* Prevents text selection */
+}
+
+/* Menu Styles */
+.menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0px 20px 0px 20px;
+    gap: 25px;
+    width: 657px;
+    height: 27px;
+    top: 108px;
+    left: 319px;
+    gap: 42px;
+
+}
+
+.menu li {
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease-in-out;
+
+}
+
+.menu li.active {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.menu li:hover {
+    color: #007bff;
+}
+
+/* Date Range Container */
+.date-range-container {
+    display: grid;
+    width: 400px;
+    height: 40px;
+    border-width: 0.5px;
+    border-radius: 1.73px;
+    background-color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    margin-left: 20px;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+
+}
+
+/* Label: "Date Range" */
+.date-range-container .label {
+    font-size: 16px;
+    color: #000000;
+}
+
+.date-range-container .date {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    margin-left: 50px;
+    padding-left: 10px;
+    width: 230px;
+    font-size: 10px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Buttons: Previous & Next */
+.date-range-container .prev-btn,
+.date-range-container .next-btn {
+    background-color: #ffffff;
+    border: none;
+    width: 24px;
+    margin: 4px;
+    height: 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.date-range-container .prev-btn:hover,
+.date-range-container .next-btn:hover {
+    background-color: #ffffff;
+}
+
+/* Date Text */
+.date-range-container .date-value {
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #fff;
+    width: 150px;
+    margin-left: 15px;
+}
+
+/* Calendar Icon */
+.date-range-container .calendar-icon {
+    font-size: 14px;
+    margin-right: 10px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.dashboard-container {
+    display: flex;
+    gap: 20px;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-side {
+    flex: 1;
+    gap: 20px;
+}
+.wallet-container, .categories-card, .client-report {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.transactions-list {
+    list-style: none;
+    padding: 0;
+}
+
+.transaction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+
+
+/* Wallet Container */
+.wallet-container {
+    max-width: 400px; /* Max width for large screens */
+    width: 100%; /* Adjusts width based on screen size */
+    background: #fff;
+    margin: 0px 10px 20px 20px;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0.1, 0.1);
+}
+
+/* Wallet Card */
+.wallet-card {
+    background: #F2F2F2;
+    border-radius: 12px;
+    margin-top: 10px;
+    width: 400px;
+    height: 160px;
+}
+
+.wallet-title {
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    /* line-height: 21.1px; */
+    letter-spacing: 0%;
+}
+
+.wallet-subtitle {
+    padding: 16px;
+}
+
+.wallet-balance-label {
+    font-size: 14px;
+    /* padding-top: 20px; */
+    padding-left: 16px;
+    color: #555;
+}
+
+.wallet-balance {
+    font-size: 24px;
+    padding-left: 16px;
+    font-weight: bold;
+    margin: 5px 0 10px 0;
+}
+
+.wallet-progress {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 10px 16px 10px 16px;
+    border-radius: 0px 0px 12px 12px;
+    background-color: #DEE0FF;
+    color: #666;
+}
+
+/* Transactions */
+.transactions-title {
+    font-size: 16px;
+    margin-top: 20px;
+    color: #666;
+}
+
+.transactions-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.transaction {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px 15px 0px;
+    border-bottom: 1px solid #eee;
+}
+
+.transaction img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.transaction-info {
+    flex-grow: 1;
+}
+
+.transaction-name {
+    font-weight: bold;
+}
+
+.transaction-department {
+    font-size: 12px;
+    color: #777;
+}
+
+.transaction-amount {
+    margin-left: auto;
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Button */
+.see-transactions {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    background: #f3f3f3;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+/* Right Section: Expense Summary */
+.expense-summary-container {
+    display: flex;
+    gap: 12px;
+}
+
+/* Expense Card */
+.expense-card {
+    background: #ffffff;
+    padding: 5px 5px 10px 15px;
+    text-align: left;
+    width: 200px;
+    /* border-radius: 16px; */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0.1, 0.1);
+}
+
+/* Expense Labels */
+.expense-label {
+    font-size: 12px;
+    color: #555;
+}
+
+/* Expense Value */
+.expense-value {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* Change Indicators */
+.expense-change {
+    font-size: 8px;
+    color: #777;
+}
+
+/* Requests Styling */
+.expense-requests {
+    font-size: 8px;
+    color: #777;
+}
+.right-side-content{
+    padding-top: 10px;
+    display: flex;
+    gap: 15px;
+}
+/* Card Container */
+.categories-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 550px;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.categories-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+/* Week Selector */
+.week-selector {
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+}
+
+/* Expense Summary */
+.expense-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.expense-title strong {
+    font-size: 24px;
+}
+
+.expense-title p {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Placeholder for Chart */
+.progress-chart {
+    width: 60px;
+    height: 60px;
+    background: conic-gradient(#d9534f 0% 20%, #5bc0de 20% 40%, #f0ad4e 40% 60%, #5cb85c 60% 80%, #6f42c1 80% 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #000;
+}
+
+/* List */
+.expense-list {
+    list-style: none;
+    padding: 0;
+}
+
+.expense-list li {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    background: #f8f8f8;
+    margin-bottom: 8px;
+}
+/* Right-aligns the amount */
+.amount {
+    margin-left: auto;
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Colored Dots */
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* Colors */
+.red { background: #d9534f; }
+.blue { background: #5bc0de; }
+.light-blue { background: #0275d8; }
+.green { background: #5cb85c; }
+.cyan { background: #5bc0de; }
+.dark-blue { background: #003f5c; }
+.orange { background: #f0ad4e; }
+.purple { background: #6f42c1; }
+
+/* Amount Styling */
+.amount {
+    font-weight: bold;
+}
+/* Container Styling */
+.client-report {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 500px;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+/* Week Selector */
+.week-selector {
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+}
+
+/* Client Card */
+.client-card {
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    background: #f8f8f8;
+    padding:  10px 15px 5px 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    gap: 8px; /* Adds uniform spacing */
+}
+
+/* Client Header - Logo and Name */
+.client-header {
+    display: flex;
+    padding-top: 5px;
+    /* align-items: center; */
+    gap: 10px; /* Space between logo and name */
+}
+
+/* Client Logo */
+.client-card img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Client Info */
+.client-info {
+    flex: 1;
+}
+.client-info h4 {
+    margin-top: auto;
+    margin-bottom: 2px; /* Reduce space below heading */
+}
+
+.client-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Reduce space between elements */
+}
+
+/* Progress Container */
+.progress-container {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    width: 60%;
+}
+
+.progress-bar {
+    flex-grow: 1; 
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: #3830d3; 
+    border-radius: 4px;
+}
+
+.percentage {
+    margin-left: 10px; 
+    min-width: 40px; 
+    text-align: right; 
+}
+
+/* Amount Styling */
+.amount {
+    text-align: right;
+}
+
+.amount strong {
+    font-size: 16px;
+}
+
+.amount span {
+    display: block;
+    font-size: 12px;
+    color: #777;
+}
+
+/* Card Footer */
+.card-footer {
+    display: flex;
+    justify-content: space-between;  /* Pushes items to the ends */
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    margin-top: auto; /* Ensures it stays at the bottom */
+}
+
+/* Total Money Spent */
+.total-spent {
+    font-size: 12px;
+    color: #777;
+}
+
+.total-spent strong {
+    color: #333;
+    font-weight: bold;
+}
+
+/* View Details */
+.view-details {
+    font-size: 12px;
+    color: #007bff;
+    cursor: pointer;
+    font-weight: bold;
+}
+/* Departmental Budget Allocation */
+.department-budget {
+    background: #fff;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.department-budget h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.budget-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.budget-item {
+    text-align: center;
+    min-width: 100px;
+    padding-right: 20px;
+    border-right: 1px solid #909090;
+}
+
+.budget-item strong {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.budget-item span {
+    font-size: 10px;
+    color: #777;
+}
+
